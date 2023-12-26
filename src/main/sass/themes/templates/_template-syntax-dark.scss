@@ -1,0 +1,48 @@
+.selection {
+  -fx-fill: $background-selection !important;
+}
+
+.plain {
+  -fx-fill: $foreground-plain !important;
+  -fx-background-color: $background-plain;
+}
+
+.object {
+  -fx-fill: $foreground-object !important;
+  -fx-background-color: $background-object;
+}
+
+.value {
+  -fx-fill: $foreground-value !important;
+  -fx-background-color: $background-value;
+}
+
+.array {
+  -fx-fill: $foreground-array !important;
+  -fx-background-color: $background-array;
+}
+
+.bool {
+  -fx-fill: $foreground-bool !important;
+  -fx-background-color: $background-bool;
+  -fx-font-weight: bold;
+}
+
+.number {
+  -fx-fill: $foreground-number !important;
+  -fx-background-color: $background-number;
+  -fx-font-weight: bold;
+}
+
+.comment {
+  -fx-fill: $foreground-comment !important;
+  -fx-background-color: $background-comment;
+}
+
+.keyword {
+  -fx-fill: $foreground-keyword !important;
+  -fx-background-color: $background-keyword;
+  -fx-font-weight: bold;
+  -fx-highlight-text-fill: black;
+  -fx-highlight-fill: pink;
+}

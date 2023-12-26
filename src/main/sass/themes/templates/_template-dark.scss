@@ -1,0 +1,970 @@
+.root {
+  -fx-focus-color: transparent;
+  -fx-faint-focus-color: transparent;
+  -fx-font-family: $font-family;
+  -fx-font-weight: MEDIUM;
+  -fx-font-size: 14;
+}
+
+.handCursor {
+  -fx-cursor: hand;
+}
+
+.input-line {
+  -fx-background-color: $foreground;
+}
+
+.text-area {
+  .content {
+    -fx-background-color: $background;
+    -fx-text-fill: $foreground;
+  }
+
+  -fx-text-fill: $foreground;
+}
+
+#toolbar {
+  -fx-background-color: $toolbar-color;
+
+  .label {
+    -fx-text-fill: $foreground-alt;
+  }
+
+  .choice-box {
+    -fx-background-color: $background-choice-box;
+    -fx-text-fill: $foreground-alt;
+    -fx-mark-color: $foreground-alt;
+  }
+
+  .toggle-button {
+    -fx-text-fill: $foreground;
+    -fx-background-color: $toolbar-color;
+
+    .icon {
+      -fx-fill: $foreground;
+    }
+  }
+
+  .context-menu {
+    -fx-background-color: $background-choice-box;
+
+    .menu-item {
+      -fx-background-color: $background-choice-box;
+
+      .label {
+        -fx-text-fill: $foreground-alt;
+        -fx-font-weight: normal;
+        -fx-padding: 0 0 0 0;
+      }
+    }
+
+    .menu-item:focused {
+      -fx-background-color: $background-selection;
+
+      .label {
+        -fx-text-fill: $selection-foreground-color;
+      }
+    }
+  }
+
+  #syncButton {
+    -fx-background-color: $background-primary-button;
+    -fx-text-fill: $foreground-alt;
+    -fx-translate-y: 1;
+    -fx-pref-height: 24px;
+    -fx-min-height: -fx-pref-height;
+    -fx-max-height: -fx-pref-height;
+  }
+
+  .jfx-button {
+    -fx-text-fill: $foreground-alt;
+    -fx-background-color: $background-primary-button;
+    -fx-translate-y: 1;
+
+    .icon {
+      -fx-fill: $foreground;
+    }
+  }
+}
+
+#openRequestArea {
+  -fx-border-width: 0 0 2 0;
+  -fx-border-color: $border-color;
+
+  .icon {
+    -fx-fill: $foreground;
+  }
+}
+
+.options-page {
+  -fx-background-color: $background;
+  -fx-border-color: $border-color;
+  -fx-padding: 20;
+
+  > .section-header {
+    -fx-text-fill: $main-accent;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+  }
+
+  > .section-end {
+    -fx-padding: 50 0 0 0;
+  }
+
+  .options-entry {
+    -fx-padding: 5;
+
+    > .label {
+      -fx-padding: 0 20 0 0;
+    }
+  }
+
+  .jfx-tree-table-view {
+    -fx-min-height: 200px;
+  }
+}
+
+.options-tabs {
+  .tab-header-background {
+    -fx-background-color: $background;
+  }
+
+  .tab {
+    -fx-pref-width: 35;
+    -fx-border-width: 0 0 3 0;
+    -fx-background-color: $background;
+    -fx-border-color: transparent;
+
+    &:selected {
+      -fx-border-width: 0 0 3 0;
+      -fx-border-color: $main-accent;
+    }
+  }
+}
+
+.toggle-button {
+  -fx-text-fill: $foreground;
+  -fx-background-color: $background;
+}
+
+.jfx-toggle-button {
+  * {
+    -fx-padding: 0;
+  }
+
+  -jfx-toggle-color: $highlight;
+  -jfx-toggle-line-color: $foreground;
+
+  .text {
+    -fx-text-fill: $foreground !important;
+  }
+}
+
+#exportArea {
+  -fx-padding: 20;
+}
+
+#openRequestArea {
+  -fx-background-color: $background;
+
+  .jfx-button {
+    -fx-padding: 7;
+  }
+
+  .icon {
+    -fx-text-fill: $foreground;
+  }
+}
+
+.jfx-tab-pane {
+  .tab-header-background {
+    -fx-background-color: $background;
+  }
+
+  .tab-header-area {
+    .tab-down-button {
+      -fx-background-color: white;
+    }
+
+    .label {
+      -fx-max-width: 150px;
+    }
+
+    .jfx-rippler {
+      -jfx-rippler-fill: $foreground;
+    }
+  }
+
+  .label {
+    -fx-text-fill: $foreground;
+    -fx-font-weight: normal;
+    -fx-padding: 6 10 6 10;
+  }
+
+  .headers-region {
+    .tab-selected-line {
+      -fx-background-color: $main-accent;
+    }
+  }
+}
+
+.mm-request-dirty {
+  -fx-fill: $main-accent;
+}
+
+#request-collection, #working-area {
+  .context-menu {
+    -fx-background-color: $background;
+
+    .menu-item {
+      -fx-background-color: $background;
+
+      .label {
+        -fx-text-fill: $foreground;
+        -fx-font-weight: normal;
+        -fx-padding: 0 0 0 0;
+      }
+    }
+
+    .menu-item:focused {
+      -fx-background-color: lighten($background, 10%);
+
+      .label {
+        -fx-text-fill: $foreground;
+      }
+    }
+  }
+}
+
+.split-menu-button {
+  > .label {
+    -fx-background-color: TRANSPARENT, TRANSPARENT, TRANSPARENT, TRANSPARENT;
+    -fx-background-radius: 3px 0px 0px 3px;
+    -fx-background-insets: 0px;
+    -fx-text-fill: white;
+  }
+
+  .arrow-button {
+    -fx-background-color: TRANSPARENT, TRANSPARENT, TRANSPARENT, TRANSPARENT;
+    -fx-text-fill: white;
+    -fx-inner-border: TRANSPARENT;
+    -fx-background-radius: 0px 3px 3px 0px;
+    -fx-background-insets: 0px;
+  }
+}
+
+.empty-menu {
+  > .arrow-button {
+    -fx-padding: 0;
+
+    > .arrow {
+      -fx-padding: 0;
+    }
+  }
+}
+
+.jfx-text-field, .jfx-combo-box {
+  -fx-background-color: $background;
+  -fx-prompt-text-fill: $foreground;
+  -jfx-focus-color: $main-accent;
+  -jfx-unfocus-color: $foreground
+}
+
+#generalRequestEdit {
+  -fx-padding: 20;
+  -fx-background-color: $background;
+  -fx-spacing: 4;
+
+  .jfx-text-field, .text-field {
+    -fx-text-fill: $foreground;
+  }
+
+  .jfx-check-box, .jfx-combo-box {
+    > * {
+      -fx-text-fill: $foreground;
+    }
+  }
+
+  #submitBtn {
+    -fx-background-color: $main-accent;
+    -fx-text-fill: $foreground;
+  }
+
+  #saveBtn {
+    -fx-background-color: $secondary-accent;
+    -fx-text-fill: $foreground;
+  }
+}
+
+.jfx-popup-container {
+  -fx-background-color: $background;
+  -fx-text-fill: $foreground;
+
+  .label {
+    -fx-text-fill: $foreground;
+  }
+}
+
+#requestComponent {
+  -fx-border-width: 0;
+
+  .variable-new {
+    -fx-fill: transparent;
+    -fx-stroke: $main-accent;
+    -fx-stroke-width: 2;
+  }
+
+  .variable {
+    -fx-fill: $main-accent;
+  }
+}
+
+#tabs {
+  .tab-label {
+    -fx-text-fill: $foreground;
+    -fx-font-weight: normal;
+  }
+
+  .tab-content-area {
+    -fx-text-fill: $foreground;
+    -fx-background-color: $background;
+    -fx-padding: 0 5 0 0;
+
+    .jfx-text-field, .text-field {
+      -fx-text-fill: $foreground;
+    }
+
+    .jfx-check-box, .jfx-combo-box {
+      -fx-text-fill: $foreground;
+    }
+
+    .text-area {
+      .content {
+        -fx-background-color: $background;
+      }
+    }
+  }
+}
+
+#statusDisplay {
+  -fx-translate-y: 5;
+  -fx-spacing: 10;
+
+  .emphasized {
+    -fx-font-weight: bold;
+  }
+
+  .label {
+    -fx-text-fill: $foreground;
+  }
+}
+
+.responseArea {
+  -fx-border-width: 0 0 0 0;
+  -fx-background-color: $background;
+
+  .glyph-icon {
+    -fx-fill: $foreground;
+  }
+}
+
+#searchArea {
+  -fx-padding: 10;
+  -fx-background-color: $background;
+}
+
+#searchAreaField {
+  -fx-padding: 2 10 2 10;
+  -fx-background-color: $background;
+  -fx-background-radius: 40px;
+
+  .jfx-text-field {
+    -fx-padding: 4 10 4 10;
+    -fx-prompt-text-fill: $foreground;
+    -fx-text-fill: $foreground;
+    -fx-background-color: $background;
+  }
+
+  .jfx-button {
+    -fx-background-color: $background;
+
+    .icon {
+      -fx-translate-y: 3;
+      -fx-fill: $foreground;
+    }
+  }
+
+  .label {
+    .icon {
+      -fx-translate-y: 3;
+      -fx-fill: $foreground;
+    }
+  }
+}
+
+.split-pane {
+  -fx-box-border: $border-color;
+  -fx-padding: 0;
+
+  *.split-pane-divider {
+    -fx-padding: 0 1 0 1;
+    -fx-background-color: $border-color;
+  }
+}
+
+.request-type {
+  -fx-font-size: 8;
+  -fx-font-weight: bold;
+  -fx-translate-y: 3;
+  -fx-text-fill: $background !important;
+  -fx-background-color: $foreground;
+  -fx-background-radius: 3px;
+  -fx-padding: 0 3 0 3;
+}
+
+.btn-starring {
+  -fx-translate-y: -3;
+}
+
+.jfx-tree-view {
+  .tree-cell {
+    -fx-background-color: $background;
+
+    &:selected {
+      -fx-background-color: $background-selection;
+
+      .label {
+        -fx-text-fill: white;
+      }
+    }
+  }
+
+  .selection-bar {
+    -fx-background-color: $background-primary-button;
+  }
+
+  .jfx-rippler {
+    -jfx-rippler-fill: $main-accent;
+  }
+
+  .glyph-icon {
+    -fx-text-fill: $foreground;
+    -fx-fill: $foreground;
+  }
+
+  .label {
+    -fx-text-fill: $foreground;
+    -fx-fill: $foreground;
+  }
+
+  .arrow {
+    -fx-background-color: $foreground;
+  }
+}
+
+#collectionContainer {
+  -fx-background-color: $background;
+}
+
+.generic-content {
+  -fx-background-color: $background;
+
+  .glyph-icon {
+    -fx-fill: $foreground;
+  }
+}
+
+.generic-content-pane {
+  -fx-background-color: $background;
+  -fx-padding: 20;
+}
+
+
+.generic-section {
+  -fx-padding: 0 0 20 0;
+}
+
+.primary-button {
+  -fx-background-color: $main-accent;
+  -fx-text-fill: white;
+}
+
+.secondary-button {
+  -fx-background-color: $secondary-accent;
+  -fx-text-fill: white;
+}
+
+.btn-add-entry {
+  -fx-pref-width: 40px;
+  -fx-background-color: $main-accent;
+  -fx-background-radius: 40px;
+  -fx-pref-height: 40px;
+  -fx-min-width: -fx-pref-width;
+  -fx-max-width: -fx-pref-width;
+  -fx-min-height: -fx-pref-height;
+  -fx-max-height: -fx-pref-height;
+  -jfx-button-type: RAISED;
+  -fx-border-width: 0 50 50 0;
+
+  .glyph-icon {
+    -fx-fill: $foreground;
+  }
+}
+
+.jfx-tree-table-view {
+  -fx-background-color: $background;
+
+  .column-header {
+    .label {
+      -fx-text-fill: $foreground;
+    }
+
+    -fx-border-width: 0 1 0 1;
+    -fx-border-color: $border-color;
+  }
+
+  .tree-table-cell {
+    -fx-border-width: 0 0 0 0;
+    -fx-pref-height: 32px;
+    -fx-alignment: center-left;
+
+    .glyph-icon {
+      -fx-fill: $foreground;
+    }
+
+    .jfx-text-field {
+      -fx-text-fill: $foreground !important;
+    }
+  }
+
+  > .virtual-flow {
+    > .clipped-container {
+      > .sheet {
+        > .tree-table-row-cell {
+          -fx-background-color: $background
+        }
+      }
+    }
+  }
+
+  &:focused {
+    > .virtual-flow {
+      > .clipped-container {
+        > .sheet {
+          > .tree-table-row-cell {
+            &:filled {
+              &:selected {
+                -fx-background-color: $background;
+                -fx-table-cell-border-color: -fx-tree-table-color;
+                -fx-text-fill: white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .tree-table-row-cell {
+      &:selected {
+        .tree-table-cell {
+          -fx-text-fill: $foreground;
+        }
+      }
+    }
+  }
+
+  .tree-table-row-cell {
+    .tree-table-cell {
+      -fx-text-fill: $foreground;
+    }
+  }
+}
+
+.contentEditor {
+  -fx-background-color: $background;
+
+  .disabled {
+    -fx-background-color: $foreground;
+  }
+
+  .label {
+    -fx-text-fill: $foreground;
+    -fx-background-color: $background;
+    -fx-translate-y: 4;
+    -fx-padding: 0 10;
+  }
+
+  .button {
+    -fx-text-fill: $foreground;
+  }
+
+  .code-area {
+    -fx-background-color: $background;
+    -fx-text-fill: $foreground;
+    -fx-font-family: $code-font-family;
+    -fx-highlight-text-fill: $background-selection;
+    -fx-font-weight: bold;
+
+    .label {
+      -fx-text-fill: $foreground;
+      -fx-background-color: $background;
+      -fx-translate-y: -1;
+      -fx-padding: 0 10;
+      -fx-font-family: $code-font-family;
+      -fx-font-weight: bold;
+    }
+  }
+
+  .contentEditor-header {
+    -fx-padding: 10;
+    -fx-background-color: $background;
+
+    .label {
+      -fx-background-color: $background;
+    }
+  }
+}
+
+.styled-text-area {
+  .text {
+    -fx-fill: $foreground;
+  }
+
+  .code-area {
+    -fx-background-color: $background;
+    -fx-text-fill: $foreground;
+    -fx-font-family: $code-font-family;
+    -fx-highlight-text-fill: $background-selection;
+  }
+}
+
+.searchBox {
+  -fx-padding: 5 10 5 10;
+  -fx-background-color: $background;
+  -fx-border-width: 0 0 1 0;
+  -fx-border-color: $foreground;
+  -fx-text-fill: $foreground;
+  -fx-fill: $foreground;
+
+  .jfx-button {
+    -fx-background-color: $background;
+    -fx-text-fill: $foreground;
+    -fx-translate-y: 1;
+    -fx-fill: $foreground;
+
+    .icon {
+      -fx-fill: $foreground;
+    }
+  }
+}
+
+.jfx-dialog-layout {
+  -fx-background-color: $background;
+
+  .list-view {
+    -fx-background-color: $background;
+  }
+
+  .list-cell {
+    -fx-background-color: $background;
+  }
+
+  .list-cell:filled:selected {
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: $selection-foreground-color;
+    -fx-font-weight: 800;
+  }
+
+  .list-cell:filled:selected:hover {
+    -fx-background-color: $background-selection;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: $background-selection;
+    -fx-text-fill: $selection-foreground-color;
+    -fx-font-weight: 800;
+  }
+
+  .list-cell:filled:hover, .list-cell:filled:focused {
+    -fx-background-color: $background-selection;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: $background-selection;
+    -fx-text-fill: $selection-foreground-color;
+  }
+
+  .glyph-icon {
+    -fx-fill: $foreground;
+  }
+
+  .label {
+    -fx-text-fill: $foreground;
+  }
+
+  .button {
+    -fx-text-fill: $foreground;
+    -fx-background-color: $background-primary-button;
+  }
+
+  .text-field {
+    -fx-text-fill: $foreground;
+  }
+
+  .list-cell {
+    -fx-text-fill: white !important;
+  }
+
+  .jfx-combo-box {
+    > * {
+      -fx-text-fill: $foreground;
+    }
+  }
+}
+
+.spinner {
+  -fx-background-color: $background;
+}
+
+.jfx-spinner {
+  .arc {
+    -fx-stroke: $main-accent;
+  }
+}
+
+.first-spinner {
+  -jfx-radius: 20;
+
+  .arc {
+    -fx-stroke-width: 5.0;
+  }
+}
+
+.second-spinner {
+  -jfx-radius: 30;
+
+  .arc {
+    -fx-stroke-width: 5.0;
+  }
+}
+
+.third-spinner {
+  -jfx-radius: 40;
+
+  .arc {
+    -fx-stroke-width: 5.0;
+  }
+}
+
+.fourth-spinner {
+  -jfx-radius: 50;
+
+  .arc {
+    -fx-stroke-width: 5.0;
+  }
+}
+
+.fifth-spinner {
+  -jfx-radius: 60;
+
+  .arc {
+    -fx-stroke-width: 5.0;
+  }
+}
+
+.sixth-spinner {
+  -jfx-radius: 70;
+
+  .arc {
+    -fx-stroke-width: 5.0;
+  }
+}
+
+.seventh-spinner {
+  -jfx-radius: 80;
+
+  .arc {
+    -fx-stroke-width: 5.0;
+  }
+}
+
+.tiny-spinner {
+  -fx-background-color: $background;
+  -fx-box-border: transparent;
+  real-radius: 10;
+  -fx-pref-height: real-radius;
+  -fx-pref-width: real-radius;
+  -fx-min-height: real-radius;
+  -fx-min-width: real-radius;
+}
+
+.jfx-snackbar-content {
+  -fx-background-color: $background-secondary-button;
+  -fx-border-width: 1;
+  -fx-border-color: $foreground;
+}
+
+.jfx-snackbar-toast {
+  -fx-text-fill: $foreground;
+  -fx-background-color: $background-secondary-button;
+}
+
+.jfx-snackbar-action {
+  -fx-text-fill: $main-accent;
+}
+
+.scroll-bar {
+  -fx-background-color: rgb(96, 96, 96);
+  -fx-background-radius: 2em;
+
+  &:horizontal {
+    .track {
+      -fx-background-color: transparent;
+      -fx-border-color: transparent;
+      -fx-background-radius: 2em;
+    }
+
+    .track-background {
+      -fx-background-color: transparent;
+      -fx-background-insets: 0;
+      -fx-background-radius: 2em;
+    }
+
+    .thumb {
+      -fx-background-color: rgb(211, 211, 211);
+      -fx-background-insets: 4 0 4 0;
+      -fx-background-radius: 2em;
+
+      &:hover {
+        -fx-background-color: rgb(231, 231, 231);
+      }
+
+      &:pressed {
+        -fx-background-color: rgb(255, 255, 255);
+      }
+    }
+
+    .increment-button {
+      -fx-background-color: transparent;
+      -fx-background-radius: 2em;
+      -fx-padding: 5;
+    }
+
+    .decrement-button {
+      -fx-background-color: transparent;
+      -fx-background-radius: 2em;
+      -fx-padding: 5;
+    }
+
+    .increment-arrow {
+      -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+      -fx-background-color: rgb(211, 211, 211);
+      -fx-padding: 0.25em;
+      -fx-rotate: -90;
+    }
+
+    .decrement-arrow {
+      -fx-background-color: rgb(211, 211, 211);
+      -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+      -fx-padding: 0.25em;
+      -fx-rotate: 90;
+    }
+
+    &:focused {
+      -fx-background-color: transparent, rgb(96, 96, 96), rgb(96, 96, 96);
+    }
+  }
+
+  &:vertical {
+    .track {
+      -fx-background-color: transparent;
+      -fx-border-color: transparent;
+      -fx-background-radius: 2em;
+    }
+
+    .track-background {
+      -fx-background-color: transparent;
+      -fx-background-insets: 0;
+      -fx-background-radius: 2em;
+    }
+
+    .thumb {
+      -fx-background-color: rgb(211, 211, 211);
+      -fx-background-insets: 0 4 0 4;
+      -fx-background-radius: 2em;
+
+      &:hover {
+        -fx-background-color: rgb(231, 231, 231);
+      }
+
+      &:pressed {
+        -fx-background-color: rgb(255, 255, 255);
+      }
+    }
+
+    .increment-button {
+      -fx-background-color: transparent;
+      -fx-background-radius: 2em;
+      -fx-padding: 5;
+    }
+
+    .decrement-button {
+      -fx-background-color: transparent;
+      -fx-background-radius: 2em;
+      -fx-padding: 5;
+    }
+
+    .increment-arrow {
+      -fx-background-color: rgb(211, 211, 211);
+      -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+      -fx-padding: 0.25em;
+      -fx-rotate: 0;
+    }
+
+    .decrement-arrow {
+      -fx-background-color: rgb(211, 211, 211);
+      -fx-shape: "M 0 0 L 4 8 L 8 0 Z";
+      -fx-padding: 0.25em;
+      -fx-rotate: -180;
+    }
+
+    &:focused {
+      -fx-background-color: transparent, rgb(96, 96, 96), rgb(96, 96, 96);
+    }
+  }
+}
+
+.popup-title {
+  -fx-font-weight: BOLD;
+}
+
+.rest.headers.list {
+  -fx-background-color: $background;
+}
+
+.list-cell {
+  -fx-text-fill: $foreground;
+  -fx-background-color: $background;
+  -fx-mark-color: $background-selection;
+}
+
+.list-cell:filled:selected {
+  -fx-background-insets: 0, 1, 2;
+  -fx-text-fill: $selection-foreground-color;
+  -fx-font-weight: 800;
+}
+
+.list-cell:filled:selected:hover {
+  -fx-background-color: $background-selection;
+  -fx-background-insets: 0, 1, 2;
+  -fx-background: $background-selection;
+  -fx-text-fill: $selection-foreground-color;
+  -fx-font-weight: 800;
+}
+
+.list-cell:filled:hover, .list-cell:filled:focused {
+  -fx-background-color: $background-selection;
+  -fx-background-insets: 0, 1, 2;
+  -fx-background: $background-selection;
+  -fx-text-fill: $selection-foreground-color;
+}
+
+.icon {
+  -fx-fill: $foreground;
+}

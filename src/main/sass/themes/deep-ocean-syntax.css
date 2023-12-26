@@ -1,0 +1,50 @@
+.selection {
+  -fx-fill: #28509E !important;
+}
+
+.plain {
+  -fx-fill: #A8AFBE !important;
+  -fx-background-color: #172236;
+}
+
+.object {
+  -fx-fill: #A8AFBE !important;
+  -fx-background-color: #172236;
+}
+
+.value {
+  -fx-fill: #517D56 !important;
+  -fx-background-color: #172236;
+}
+
+.array {
+  -fx-fill: #A8AFBE !important;
+  -fx-background-color: #172236;
+}
+
+.bool {
+  -fx-fill: #6897BB !important;
+  -fx-background-color: #172236;
+  -fx-font-weight: bold;
+}
+
+.number {
+  -fx-fill: #6897BB !important;
+  -fx-background-color: #172236;
+  -fx-font-weight: bold;
+}
+
+.comment {
+  -fx-fill: #647F94 !important;
+  -fx-background-color: #172236;
+}
+
+.keyword {
+  -fx-fill: #CC844F !important;
+  -fx-background-color: #172236;
+  -fx-font-weight: bold;
+  -fx-highlight-text-fill: black;
+  -fx-highlight-fill: pink;
+}
+
+/*# sourceMappingURL=deep-ocean-syntax.css.map */
