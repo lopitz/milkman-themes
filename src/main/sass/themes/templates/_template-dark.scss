@@ -41,7 +41,7 @@
     -fx-background-color: $toolbar-color;
 
     .icon {
-      -fx-fill: $foreground;
+      -fx-fill: $foreground-primary-button;
     }
   }
 
@@ -69,7 +69,7 @@
 
   #syncButton {
     -fx-background-color: $background-primary-button;
-    -fx-text-fill: $foreground-alt;
+    -fx-text-fill: $foreground-primary-button;
     -fx-translate-y: 1;
     -fx-pref-height: 24px;
     -fx-min-height: -fx-pref-height;
@@ -77,12 +77,12 @@
   }
 
   .jfx-button {
-    -fx-text-fill: $foreground-alt;
+    -fx-text-fill: $foreground-primary-button;
     -fx-background-color: $background-primary-button;
     -fx-translate-y: 1;
 
     .icon {
-      -fx-fill: $foreground;
+      -fx-fill: $foreground-primary-button;
     }
   }
 }
@@ -92,7 +92,7 @@
   -fx-border-color: $border-color;
 
   .icon {
-    -fx-fill: $foreground;
+    -fx-fill: $foreground-primary-button;
   }
 }
 
@@ -172,7 +172,7 @@
   }
 
   .icon {
-    -fx-text-fill: $foreground;
+    -fx-fill: $foreground-primary-button;
   }
 }
 
@@ -286,13 +286,13 @@
   }
 
   #submitBtn {
-    -fx-background-color: $main-accent;
-    -fx-text-fill: $foreground;
+    -fx-background-color: $background-primary-button;
+    -fx-text-fill: $foreground-primary-button;
   }
 
   #saveBtn {
-    -fx-background-color: $secondary-accent;
-    -fx-text-fill: $foreground;
+    -fx-background-color: $background-secondary-button;
+    -fx-text-fill: $foreground-secondary-button;
   }
 }
 
@@ -390,14 +390,14 @@
 
     .icon {
       -fx-translate-y: 3;
-      -fx-fill: $foreground;
+      -fx-fill: $foreground-primary-button;
     }
   }
 
   .label {
     .icon {
       -fx-translate-y: 3;
-      -fx-fill: $foreground;
+      -fx-fill: $foreground-primary-button;
     }
   }
 }
@@ -485,18 +485,18 @@
 }
 
 .primary-button {
-  -fx-background-color: $main-accent;
-  -fx-text-fill: white;
+  -fx-background-color: $background-primary-button;
+  -fx-text-fill: $foreground-primary-button;
 }
 
 .secondary-button {
-  -fx-background-color: $secondary-accent;
-  -fx-text-fill: white;
+  -fx-background-color: $background-secondary-button;
+  -fx-text-fill: $foreground-secondary-button;
 }
 
 .btn-add-entry {
   -fx-pref-width: 40px;
-  -fx-background-color: $main-accent;
+  -fx-background-color: $background-primary-button;
   -fx-background-radius: 40px;
   -fx-pref-height: 40px;
   -fx-min-width: -fx-pref-width;
@@ -507,7 +507,7 @@
   -fx-border-width: 0 50 50 0;
 
   .glyph-icon {
-    -fx-fill: $foreground;
+    -fx-fill: $foreground-primary-button;
   }
 }
 
@@ -595,11 +595,11 @@
   }
 
   .button {
-    -fx-text-fill: $foreground;
+    -fx-text-fill: $foreground-primary-button;
   }
 
   .code-area {
-    -fx-background-color: $background;
+    -fx-background-color: $background-syntax;
     -fx-text-fill: $foreground;
     -fx-font-family: $code-font-family;
     -fx-highlight-text-fill: $background-selection;
@@ -607,7 +607,7 @@
 
     .label {
       -fx-text-fill: $foreground;
-      -fx-background-color: $background;
+      -fx-background-color: $background-syntax;
       -fx-translate-y: -1;
       -fx-padding: 0 10;
       -fx-font-family: $code-font-family;
@@ -647,13 +647,13 @@
   -fx-fill: $foreground;
 
   .jfx-button {
-    -fx-background-color: $background;
-    -fx-text-fill: $foreground;
+    -fx-background-color: $background-primary-button;
+    -fx-text-fill: $foreground-primary-button;
     -fx-translate-y: 1;
-    -fx-fill: $foreground;
+    -fx-fill: $foreground-primary-button;
 
     .icon {
-      -fx-fill: $foreground;
+      -fx-fill: $foreground-primary-button;
     }
   }
 }
@@ -692,7 +692,7 @@
   }
 
   .glyph-icon {
-    -fx-fill: $foreground;
+    -fx-fill: $foreground-primary-button;
   }
 
   .label {
@@ -700,8 +700,16 @@
   }
 
   .button {
-    -fx-text-fill: $foreground;
-    -fx-background-color: $background-primary-button;
+    -fx-text-fill: $foreground-primary-button;
+    -fx-background-color: #FFFFFF00;
+
+    .glyph-icon {
+      -fx-fill: $foreground-primary-button;
+    }
+
+    .icon {
+      -fx-fill: $foreground-primary-button;
+    }
   }
 
   .text-field {
@@ -963,5 +971,5 @@
 }
 
 .icon {
-  -fx-fill: $foreground;
+  -fx-fill: $foreground-primary-button;
 }
