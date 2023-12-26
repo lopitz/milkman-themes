@@ -227,7 +227,7 @@
     }
 
     .menu-item:focused {
-      -fx-background-color: lighten($background, 10%);
+      -fx-background-color: $background;
 
       .label {
         -fx-text-fill: $foreground;
@@ -666,6 +666,7 @@
   }
 
   .list-cell {
+    -fx-text-fill: $foreground !important;
     -fx-background-color: $background;
   }
 
@@ -676,17 +677,17 @@
   }
 
   .list-cell:filled:selected:hover {
+    -fx-background: $background-selection;
     -fx-background-color: $background-selection;
     -fx-background-insets: 0, 1, 2;
-    -fx-background: $background-selection;
     -fx-text-fill: $selection-foreground-color;
     -fx-font-weight: 800;
   }
 
   .list-cell:filled:hover, .list-cell:filled:focused {
+    -fx-background: $background-selection;
     -fx-background-color: $background-selection;
     -fx-background-insets: 0, 1, 2;
-    -fx-background: $background-selection;
     -fx-text-fill: $selection-foreground-color;
   }
 
@@ -705,10 +706,6 @@
 
   .text-field {
     -fx-text-fill: $foreground;
-  }
-
-  .list-cell {
-    -fx-text-fill: white !important;
   }
 
   .jfx-combo-box {
@@ -951,17 +948,17 @@
 }
 
 .list-cell:filled:selected:hover {
+  -fx-background: $background-selection;
   -fx-background-color: $background-selection;
   -fx-background-insets: 0, 1, 2;
-  -fx-background: $background-selection;
   -fx-text-fill: $selection-foreground-color;
   -fx-font-weight: 800;
 }
 
 .list-cell:filled:hover, .list-cell:filled:focused {
+  -fx-background: $background-selection;
   -fx-background-color: $background-selection;
   -fx-background-insets: 0, 1, 2;
-  -fx-background: $background-selection;
   -fx-text-fill: $selection-foreground-color;
 }
 
