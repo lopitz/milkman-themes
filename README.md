@@ -34,12 +34,16 @@
 </details>
 
 ## Milkman - a quick recap
+
 <a name="milkman"></a>
 
-Milkman is a free and open source workbench for everything that comes with the request and response paradigm. It started out as an alternative to Postman, which forces people to
-sign in to their cloud offer nowadays even if you just wanted to save your requests. This makes it hard to use in a corporate environment where request of
+Milkman is a free and open source workbench for everything that comes with the request and response paradigm. It started
+out as an alternative to Postman, which forces people to
+sign in to their cloud offer nowadays even if you just wanted to save your requests. This makes it hard to use in a
+corporate environment where request of
 internal APIs might be considered a secret and must not be stored in a cloud.
-However, Milkman was designed in a pretty clever and flexible manner allowing users to manage and execute GraphQL, REST, GRPC, SQL queries, Cassandra and other queries.
+However, Milkman was designed in a pretty clever and flexible manner allowing users to manage and execute GraphQL, REST,
+GRPC, SQL queries, Cassandra and other queries.
 Please find more information on the [Milkman homepage][milkman-homepage].
 
 ## Themes
@@ -54,50 +58,62 @@ As part of this plugin 5 new UI themes are available:
 
 ## Prerequisites
 
-This is not the whole Milkman workbench, it's just a plugin that adds new themes. This means, you need to have Milkman installed already.
+This is not the whole Milkman workbench, it's just a plugin that adds new themes. This means, you need to have Milkman
+installed already.
 If you don't have by now, please follow the instructions on the [Milkman homepage] first.
 
 ## Installation
 
-Currently, there is no automatic installation for plugins available. To manually install this plugin, please find first the installation
+Currently, there is no automatic installation for plugins available. To manually install this plugin, please find first
+the installation
 folder of your Milkman workbench. Typical installation locations are:
+
 - on Windows: C:\Program Files\Milkman
 - on Mac: /Applications/Milkman.app
 
-beneath that, you will find a `plugins` folder. It is possible, that there are several sub-folders under the installation folder, e.g. the
+beneath that, you will find a `plugins` folder. It is possible, that there are several sub-folders under the
+installation folder, e.g. the
 location for the plugins folder on MacOS is typically: `/Applications/Milkman.app/Contents/Resources/plugins`.
 
-To install the themes plugin, download the latest release directly from [github][latest-release] and copy the jar file to the `plugins` folder.
-If you already have a previous version of the plugin installed, delete the file manually from the `plugins` folder. 
-Restart the Milkman workbench, go to `Settings` -> `Application` and find the `Themes` menu option (see also the screenshots of the themes below).
+To install the themes plugin, download the latest release directly from [github][latest-release] and copy the jar file
+to the `plugins` folder.
+If you already have a previous version of the plugin installed, delete the file manually from the `plugins` folder.
+Restart the Milkman workbench, go to `Settings` -> `Application` and find the `Themes` menu option (see also the
+screenshots of the themes below).
 
 ### Console Dark
 
 ![][console-dark-screenshot]
 
 ### Dark Violet
+
 ![][dark-violet-screenshot]
 
 ### Deep Ocean (my favorite, and reason I started with this plugin)
+
 ![][deep-ocean-screenshot]
 
 ### Dracula (dark and bloody)
+
 ![][dracula-screenshot]
 
 ### GitHub Dark
+
 ![][github-dark-screenshot]
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the [open issues](https://github.com/lopitz/milkman-themes/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/lopitz/milkman-themes/issues) for a list of proposed features (and known
+issues).
 
 <!-- CONTRIBUTING -->
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be, learn, inspire, and create. Any contributions you make are **greatly
+Contributions are what make the open source community such an amazing place to be, learn, inspire, and create. Any
+contributions you make are **greatly
 appreciated**.
 
 1. Fork the Project
@@ -105,7 +121,6 @@ appreciated**.
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
 
 <!-- LICENSE -->
 
@@ -153,7 +168,11 @@ Project Link: [https://github.com/lopitz/milkman-themes](https://github.com/lopi
 [milkman-homepage]: https://github.com/warmuuh/milkman
 
 [console-dark-screenshot]: /src/img/screenshots/console-dark.png
+
 [dark-violet-screenshot]: /src/img/screenshots/dark-violet.png
+
 [deep-ocean-screenshot]: /src/img/screenshots/deep-ocean.png
+
 [dracula-screenshot]: /src/img/screenshots/dracula.png
+
 [github-dark-screenshot]: /src/img/screenshots/github-dark.png
