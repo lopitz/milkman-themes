@@ -51,6 +51,12 @@ jobs:
     
     - name: Package
       run: ./mvnw -B package
+
+    - name: Debug changed files
+      run: |
+        git diff pom.xml
+        git status 
+        git add pom.xml
       
     - name: Commit files
       run: git commit -m "release version" -a
