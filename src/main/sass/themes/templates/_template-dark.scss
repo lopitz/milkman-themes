@@ -293,6 +293,24 @@
   #saveBtn {
     -fx-background-color: $background-secondary-button;
     -fx-text-fill: $foreground-secondary-button;
+
+    .menu-item {
+      -fx-background-color: $background-choice-box;
+
+      .label {
+        -fx-text-fill: $foreground-alt;
+        -fx-font-weight: normal;
+        -fx-padding: 0 0 0 0;
+      }
+    }
+
+    .menu-item:focused {
+      -fx-background-color: $background-selection;
+
+      .label {
+        -fx-text-fill: $selection-foreground-color;
+      }
+    }
   }
 }
 
@@ -612,6 +630,11 @@
       -fx-padding: 0 10;
       -fx-font-family: $code-font-family;
       -fx-font-weight: bold;
+    }
+
+    .caret {
+      -fx-stroke: $syntax-caret-color;
+      -fx-stroke-width: 2
     }
   }
 

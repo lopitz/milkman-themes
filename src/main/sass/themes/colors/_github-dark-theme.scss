@@ -9,8 +9,8 @@ $background: #404345;
 $background-syntax: #111111;
 $toolbar-color: #{darken($background, 10%)};
 $background-choice-box: $background;
-$background-primary-button: $background-choice-box;
-$background-secondary-button: $background-choice-box;
+$background-primary-button: $main-accent;
+$background-secondary-button: $secondary-accent;
 $foreground-primary-button: $foreground;
 $foreground-secondary-button: $foreground;
 $background-selection: #00A0A0;
@@ -33,3 +33,4 @@ $foreground-object: $foreground-array;
 $background-object: $background-syntax;
 $foreground-plain: $foreground;
 $background-plain: $background-syntax;
+$syntax-caret-color: $foreground
