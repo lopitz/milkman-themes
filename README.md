@@ -133,7 +133,7 @@ Distributed under the Apache 2.0 License. See [LICENSE.md](LICENSE) for more inf
 
 ## Contact
 
-Your Name - [@lars_opitz](https://twitter.com/lars_opitz)
+Lars Opitz - [in/lars_opitz][linkedin-url]
 
 Project Link: [https://github.com/lopitz/milkman-themes](https://github.com/lopitz/milkman-themes)
 
