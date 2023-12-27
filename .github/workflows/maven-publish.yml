@@ -36,13 +36,13 @@ jobs:
         servers: '[{ "id": "github", "privateKey": "${ secrets.SSH_PRIVATE_KEY }", "username": "${ github.actor }", "password": "${ secrets.SSH_PRIVATE_KEY }" }]'
 
     - name: Maven stats
-      run: ./mvnw.cmd -version
+      run: ./mvnw -version
     
     - name: Bump to release version
-      run: ./mvnw.cmd --% -B org.codehaus.mojo:build-helper-maven-plugin:3.0.0:parse-version versions:set versions:commit -DnewVersion="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}"
+      run: ./mvnw --% -B org.codehaus.mojo:build-helper-maven-plugin:3.0.0:parse-version versions:set versions:commit -DnewVersion="${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}"
     
     - name: Package
-      run: ./mvnw.cmd -B package
+      run: ./mvnw -B package
 
     - name: Push changes
       uses: ad-m/github-push-action@master
@@ -50,7 +50,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         
     - name: create tag
-      run: ./mvnw.cmd --% org.codehaus.mojo:exec-maven-plugin:1.6.0:exec -Dexec.executable="git" -Dexec.args="tag ${project.version}"
+      run: ./mvnw --% org.codehaus.mojo:exec-maven-plugin:1.6.0:exec -Dexec.executable="git" -Dexec.args="tag ${project.version}"
       
     - name: Push changes
       uses: ad-m/github-push-action@master
@@ -64,7 +64,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Bump version to next dev version
-      run: ./mvnw.cmd --% -B org.codehaus.mojo:build-helper-maven-plugin:3.0.0:parse-version versions:set versions:commit -DnewVersion="${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.0-SNAPSHOT"
+      run: ./mvnw --% -B org.codehaus.mojo:build-helper-maven-plugin:3.0.0:parse-version versions:set versions:commit -DnewVersion="${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.0-SNAPSHOT"
     
     - name: Commit files
       run: |
