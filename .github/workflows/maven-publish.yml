@@ -43,7 +43,13 @@ jobs:
     
     - name: Package
       run: ./mvnw -B package
-
+      
+    - name: Commit files
+      run: |
+        git config --local user.email "lars@lars-opitz.de"
+        git config --local user.name "GitHub Action"
+        git commit -m "release version" -a
+        
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
@@ -68,7 +74,7 @@ jobs:
     
     - name: Commit files
       run: |
-        git config --local user.email "action@github.com"
+        git config --local user.email "lars@lars-opitz.de"
         git config --local user.name "GitHub Action"
         git commit -m "preparing next version" -a
     
