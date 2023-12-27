@@ -27,6 +27,11 @@ jobs:
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
+    - uses: actions/checkout@v3
+      with:
+        ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        persist-credentials: true
+        
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       
@@ -53,7 +58,7 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.TOKEN }}
+        ssh: true
         
     - name: create tag
       run: ./mvnw org.codehaus.mojo:exec-maven-plugin:1.6.0:exec -Dexec.executable="git" -Dexec.args='tag ${project.version}'
@@ -62,7 +67,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         tags: true
-        github_token: ${{ secrets.TOKEN }}
+        ssh: true
         
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
@@ -81,4 +86,4 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.TOKEN }}
+        ssh: true
