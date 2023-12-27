@@ -6,7 +6,7 @@ $foreground: #A8AFBE;
 $foreground-alt: #{lighten($foreground, 10%)};
 $selection-foreground-color: $foreground;
 $background: #172236;
-$background-syntax: $background;
+$background-syntax: #151F2F;
 $toolbar-color: #151F2F;
 $background-choice-box: #{lighten($toolbar-color, 10%)};
 $background-primary-button: $background-choice-box;

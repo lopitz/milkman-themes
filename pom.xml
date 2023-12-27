@@ -6,6 +6,20 @@
     <version>0.0.1-SNAPSHOT</version>
     <artifactId>milkman-themes</artifactId>
 
+    <scm>
+        <connection>scm:git:${project.scm.url}</connection>
+        <developerConnection>scm:git:${project.scm.url}</developerConnection>
+        <url>git@github.com:lopitz/milkman-themes.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.github.warmuuh</groupId>
@@ -14,12 +28,6 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
 
     <build>
         <resources>
@@ -85,6 +93,15 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven-release-plugin.version}</version>
+                <configuration>
+                    <scmCommentPrefix>[ci skip]</scmCommentPrefix>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                </configuration>
             </plugin>
         </plugins>
     </build>
