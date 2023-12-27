@@ -33,7 +33,7 @@ jobs:
     - name: maven-settings-xml-action
       uses: whelk-io/maven-settings-xml-action@v4
       with:
-        servers: '[{ "id": "github", "privateKey": "${{ secrets.SSH_PRIVATE_KEY }}", "username": "${{ github.actor }}", "password": "${{ secrets.SSH_PRIVATE_KEY }}" }]'
+        servers: '[{ "id": "github", "privateKey": "${ secrets.SSH_PRIVATE_KEY }", "username": "${ github.actor }", "password": "${ secrets.SSH_PRIVATE_KEY }" }]'
 
     - name: Maven stats
       run: ./mvnw.cmd -version
