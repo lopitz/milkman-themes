@@ -137,9 +137,7 @@ LinkedIn: [Lars Opitz][linkedin-url]
 
 Project Link: [https://github.com/lopitz/milkman-themes](https://github.com/lopitz/milkman-themes)
 
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+<!-- Links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/lopitz/milkman-themes.svg?style=flat-square
 
