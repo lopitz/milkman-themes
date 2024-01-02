@@ -105,6 +105,7 @@
 								<name>milkman.plugin</name>
 								<manifestEntries>
 									<Id>More Themes for Milkman Plugin</Id>
+									<Author>Lars Opitz</Author>
 								</manifestEntries>
 							</manifestSection>
 						</manifestSections>
