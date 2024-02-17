@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    {
+      "author": "Lars Opitz",
+      "name": "milkman-themes",
+      "artifact": "milkman-themes.jar",
+      "description": "Contains 5 new UI themes: Console Dark, Dark Violet, Deep Ocean, Dracula, GitHub Dark"
+    }
+  ]
+}
